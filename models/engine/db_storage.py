@@ -35,6 +35,20 @@ class DBStorage():
                     objects[element.__class__.__name__+"."+element.id] = element
         return objects
 
-    def new(self, obj):
+    def new(self, obj): #check afetr
         """add the object to the current database session"""
-        
+        self.__session.add(obj)
+
+    def save(self): #check afetr
+        """ commit all changes of the current database session """
+        self.__session.commit()
+
+    def delete(self, obj=None): #check afetr
+        """delete from the current database session obj if not None"""
+        if obj:
+            for row in self.__session.query().all()
+                self.__session.delete()
+            self.save()
+
+    def reload(self): #check afetr
+        """"""
