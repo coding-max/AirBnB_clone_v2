@@ -5,7 +5,6 @@ from models.base_model import BaseModel
 from models.base_model import Base
 from sqlalchemy.sql.schema import ForeignKey
 from sqlalchemy import Column, String
-from os import getenv
 
 
 class Review(BaseModel, Base):
