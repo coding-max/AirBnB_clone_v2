@@ -10,11 +10,11 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, scoped_session, Session
+from sqlalchemy.orm import sessionmaker, scoped_session
 from os import getenv
 
 
-classes = {"State": State, "City": City, "User": User}
+classes = {"State": State, "City": City, "User": User, "Place": Place}
 
 
 class DBStorage():
