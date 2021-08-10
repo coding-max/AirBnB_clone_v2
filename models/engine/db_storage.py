@@ -14,8 +14,8 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from os import getenv
 
 
-classes = {"State": State, "City": City, "User": User, "Place": Place}
-
+classes = {'User': User, 'Place': Place, 'Review': Review,
+            'State': State, 'City': City, 'Amenity': Amenity}
 
 class DBStorage():
     """new engine, sqlalchemy"""
