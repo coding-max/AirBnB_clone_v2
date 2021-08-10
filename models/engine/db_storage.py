@@ -15,7 +15,7 @@ from os import getenv
 
 
 classes = {'User': User, 'Place': Place, 'Review': Review,
-            'State': State, 'City': City, 'Amenity': Amenity}
+            'State': State, 'City': City}
 
 class DBStorage():
     """new engine, sqlalchemy"""
