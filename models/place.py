@@ -25,7 +25,7 @@ class Place(BaseModel, Base):
     price_by_night = Column(Integer, nullable=False, default=0)
     latitude = Column(Float, nullable=False)
     longitude = Column(Float, nullable=False)
-    reviews = relationship("Review", backref="place")
+    reviews = relationship("Review", cascade="all,delete", backref="place")
 
     if getenv('HBNB_TYPE_STORAGE') != 'db':
         @property
