@@ -22,3 +22,4 @@ try_files \$uri \$uri/ =404;
 }
 }" >> /etc/nginx/sites-available/default
 sudo service nginx restart
+exit 0
