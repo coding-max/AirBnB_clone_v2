@@ -2,7 +2,7 @@
 """starts a Flask web application that listens on 0.0.0.0, port 5000"""
 
 from models import storage
-from models.states import State
+from models.state import State
 from flask import Flask
 from flask import render_template
 
