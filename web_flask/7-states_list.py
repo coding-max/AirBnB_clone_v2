@@ -2,6 +2,7 @@
 """starts a Flask web application that listens on 0.0.0.0, port 5000"""
 
 from models import storage
+from models.states import State
 from flask import Flask
 from flask import render_template
 
@@ -16,7 +17,7 @@ def states_list():
                sorted by name (A-Z)
             -> li: description of one 'State': "<state.id>: <b><state.name><b>"
     """
-    states = storage.all("State")
+    states = storage.all(State)
     return render_template("7-states_list.html", states=states)
 
 
